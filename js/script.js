@@ -21,14 +21,17 @@ const slide = new Vue({
     },
     methods: {
       next :function () {
-         if (this.counter < this.images.length - 1) {
-            this.counter ++ 
+          this.counter ++
+         if (this.counter > this.images.length - 1) {
+            this.counter = 0
          }
       },
       prev :function () {
-          if (this.counter > 0) {
             this.counter --
+          if (this.counter < 0) {
+            this.counter = this.images.length - 1
           }    
-      }
+      },
+
     }
 })
