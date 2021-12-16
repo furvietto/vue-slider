@@ -34,14 +34,14 @@ const slide = new Vue({
             this.counter = this.images.length - 1
           }    
       },
-      time : function () {
+      time :function () {
          this.timer = setInterval(
               this.next, 1000);
       },
 
       stop: function () {
            clearInterval(this.timer)
-      }
+      },
     
     },
     created() {
