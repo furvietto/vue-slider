@@ -7,3 +7,28 @@
 // Consigli del giorno:
 // Leggete sempre la documentazione, partite dalle cose basilari per poi aggiungere complessità.
 // Ricordiamo sempre che è necessario capire bene prima che dati dobbiamo andare a manipolare.
+
+const slide = new Vue({
+    el:"#app",
+    data: {
+        images: [
+        "image1.jpg",
+        "image2.jpg",
+        "image3.jpg",
+        "image4.jpg",
+        ],
+        counter: 0
+    },
+    methods: {
+      next :function () {
+         if (this.counter < this.images.length - 1) {
+            this.counter ++ 
+         }
+      },
+      prev :function () {
+          if (this.counter > 0) {
+            this.counter --
+          }    
+      }
+    }
+})
