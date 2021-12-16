@@ -25,7 +25,9 @@
       </div>
       <div class="nav">
         <i  
-        v-for="(item, index) in images.length" :class="counter == index ?'active' : '' "
+        v-for="(item, index) in images.length" 
+        :class="counter == index ?'active' : '' "
+        @click="counter = index"
          class="fas fa-circle"></i>
       </div>
     </div>

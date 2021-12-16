@@ -17,7 +17,8 @@ const slide = new Vue({
         "image3.jpg",
         "image4.jpg",
         ],
-        counter: 0
+        counter: 0,
+
     },
     methods: {
       next :function () {
@@ -32,6 +33,15 @@ const slide = new Vue({
             this.counter = this.images.length - 1
           }    
       },
+      time : function () {
+          setInterval(() => {
+              this.next
+          }, 3000);
+      }
+      
 
-    }
+    },
+    created() {
+        this.timing()
+    },
 })
