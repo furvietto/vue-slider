@@ -24,10 +24,12 @@
         <i class="fas fa-angle-right"></i>
       </div>
       <div class="nav">
-        <i  
+        <i 
         v-for="(item, index) in images.length" 
         :class="counter == index ?'active' : '' "
         @click="counter = index"
+        @mouseover="stop"
+        @mouseleaves="time"
          class="fas fa-circle"></i>
       </div>
     </div>
