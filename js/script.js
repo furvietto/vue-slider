@@ -18,8 +18,6 @@ const slide = new Vue({
         "image4.jpg",
         ],
         counter: 0,
-        trigger: null
-
     },
     methods: {
       next :function () {
@@ -35,8 +33,9 @@ const slide = new Vue({
           }    
       },
       time :function () {
-         this.timer = setInterval(
-              this.next, 1000);
+         this.timer = setInterval(() => {
+           this.next()
+         }, 3000);
       },
 
       stop: function () {
